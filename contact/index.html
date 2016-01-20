@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="//fonts.googleapis.com/css?family=Roboto:500,900,300,700,400,100" rel="stylesheet">
+    <title>Instant Message</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Send me a quick message.">
+    <meta name="keywords" content="">
+    <meta name="author" content="Cryptocosm Developers, Samuel Steele, Devin Fowler">
+    <link rel="icon" href="/img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+    <link href="/css/styles.css" rel="stylesheet">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/three.js/r70/three.min.js" type="text/javascript"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    
+</head>
+
+<body>
+
+    <header>
+    
+        <a id="title" href="/">DEVIN FOWLER</a>
+        <div id="canvas"></div>
+        
+    </header>
+
+    <div id="card">
+    
+        <h3 style="text-align: left;">MESSAGE:</h3>
+        
+        <form name="contact-form" action="submit.php" method="post">
+        
+            <span>Your email:</span><span class="req">*</span>
+            <input type="email" name="email" placeholder="me@example.com" required="">
+            
+            <br> <span>Your name:</span><span class="req">*</span>
+            <input type="text" name="name" placeholder="Steve Jobs" required="">
+            
+            <br> <span>Title (optional)</span>
+            <input type="text" name="title" placeholder="Title">
+            
+            <br>
+            
+            <br> <span>What do you have to say?</span><span class="req">*</span>
+            <textarea name="content" id="content" style="resize:none;" required></textarea>
+            
+            <br>
+            
+            <div class="g-recaptcha" data-sitekey="6LdDLwYTAAAAAH3SYBwdmZFhN2JmBE-Pg4iU5i3a"></div>                    
+            
+            <input type="submit" name="submit" id="submit" title="Submit">
+            
+        </form>
+        
+        <br>
+        
+        <div id="info">
+        
+            <p>If you're contacting with an inquire on the services I offer, please be sure to be detailed in what your expectations would be. I will try to get back to you as soon as possible.</p>
+            
+            <br>
+            
+            <p>If this fails, try contacting me with one of the following:</p>
+            
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="mailto:fowlerd11@gmail.com?subject:Contact%20Cryptocosm">E-Mail</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="http://twitter.com/DevinFowler11">Twitter</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://www.linkedin.com/pub/devin-fowler/b8/292/49">LinkedIn</a>
+            </p>
+            
+            <br>
+            
+            <p>After submitting, you will be redirected back to the homepage.</p>
+            
+        </div>
+        
+    </div>
+    
+    <div id="footercard" style="margin-top:45%">
+        
+        <div id="ft-contact" class="ft-el">
+            
+			<p class="ft-heading">CONTACT:</p>
+            <p>&nbsp;<a href="mailto:fowlerd11@gmail.com?subject:Contact%20Devin%20Fowler">E-Mail</a>
+            </p>
+            <p>&nbsp;<a href="http://twitter.com/DevinFowler11" target="_blank">Twitter</a>
+            </p>
+            <p>&nbsp;<a href="https://www.linkedin.com/pub/devin-fowler/b8/292/49" target="_blank">LinkedIn</a>
+            </p>
+                
+		</div>
+            
+		<div id="ft-line" class="ft-el"></div>
+            
+		<div id="ft-sitemap" class="ft-el">
+            
+			<div id="ft-sitemap-left">
+                
+                <p class="ft-heading">SITEMAP:</p>
+                <p>&nbsp;<a href="/">Home</a>
+                </p>
+                <p>&nbsp;<a href="/about">About</a>
+                </p>
+                <p>&nbsp;<a href="/projects">Projects</a>
+                </p>
+                    
+			</div>
+                
+			<div id="ft-sitemap-right">
+                
+                <p><a href="/resume">Resume</a>
+                </p>
+                <p><a href="/contact">Instant Message</a>
+                </p>
+                    
+			</div>
+                
+		</div>
+            
+		<p id="copyright">© 2015 Devin Fowler | All Rights Reserved</p>
+            
+	</div>
+    
+	<script src="/js/animation.js" type="text/javascript"></script>
+    
+</body>
+</html>

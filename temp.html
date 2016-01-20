@@ -1,0 +1,66 @@
+<link href='http://fonts.googleapis.com/css?family=Roboto:500,900,300,700,400,100' rel='stylesheet'>
+<style>
+    body {
+        font-family: 'Roboto';
+    }
+    
+    .card {
+        margin: 16px;
+        width: 30%;
+        height: 250px;
+        background-color: #F5F5F5;
+        border-radius: 2px;
+        box-shadow: 0px 4px 10px #9E9E9E;
+        cursor: pointer;
+        z-index: 1;
+        display: inline-block;
+        overflow: hidden;
+        margin: 100px;
+    }
+    
+    .card:hover .portrait img {
+        transform: scale(1.025);
+    }
+    
+    .portrait {
+        width: 100%;
+        height: 70%;
+        overflow: hidden;
+    }
+    
+    .portrait img {
+        position: relative;
+        top: -54%;
+        left: -16%;
+        width: 130%;
+        height auto;
+        opacity: .85;
+        transition: transform .6s;
+    }
+    
+    .card-content {
+        width: 92%;
+        height: 22%;
+        padding: 4%;
+    }
+    
+    .name {
+        font-size: 1.3em;
+        font-weight 500;
+    }
+    
+    .occupation {
+        font-style: Italic
+    }
+</style>
+
+<div class="card" id="sam-card">
+    <div id="sam-ink" class="ink"></div>
+    <div class="portrait">
+        <img src="img/sam.png">
+    </div>
+    <div class="card-content">
+        <div class="name">Samuel Steele</div>
+        <div class="occupation">Developer</div>
+    </div>
+</div>
