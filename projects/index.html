@@ -3,7 +3,7 @@
 
 <head>
 
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link href="//fonts.googleapis.com/css?family=Roboto:500,900,300,700,400,100" rel="stylesheet">
     <title>Projects</title>
     <meta charset="UTF-8">
@@ -16,50 +16,53 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/three.js/r70/three.min.js" type="text/javascript"></script>
     <!--<script src="js/three.min.js" type="text/javascript"></script>-->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    
+
     <style>
         #proj-content {
             text-align: center;
         }
     </style>
-    
+
 </head>
 
 <body>
 
     <header>
-    
+
         <a id="title" href="/">DEVIN FOWLER</a>
         <div id="phrase">Projects</div>
         <div id="canvas"></div>
-        
+
     </header>
-    
+
     <nav>
-    
+
         <a class="nav-item" href="/">HOME</a>
         <a class="nav-item" href="/about">ABOUT</a>
         <a class="nav-item nav-active" href="/projects">PROJECTS</a>
         <a class="nav-item" href="/resume">RESUME</a>
-        
+
     </nav>
-    
+
     <div class="content" id="proj-content">
-    
+
         <br>
         <br>
-        
+
+        <a id="project-viewer-overlay" href="javascript:closeProjInfo()"></a>
+        <div id="project-viewer"></div>
+
         <div id="services-container">
-        
+
             <div class="h1">RECENT PROJECTS</div>
-            
+
             <hr style="width: 80%;">
-            
+
             <br>
-            
+
             <div id="proj-note">Click on a project to open/close it.</div>
 
-			<!-- Card -->
+            <!-- Card -->
             <!--<div class="proj-card" id="5" onclick="openProjInfo(this.id)">
             
                 <div class="proj-banner">
@@ -83,147 +86,78 @@
                 </div>
                 
             </div>-->
-            
-            
-			<!-- Card -->
+
+
+            <!-- Card -->
             <div class="proj-card" id="5" onclick="openProjInfo(this.id)">
-            
                 <div class="proj-banner">
                     <img src="/img/lunar.png" alt="Lunar Intrusion">
                 </div>
-                
                 <div class="proj-card-content">
-                
                     <div class="proj-name">Lunar Intrusion</div>
                     <div class="proj-platform">Windows</div>
-                    <div class="proj-info">
-                    
-                        <p><i>Lunar Intrusion</i> is a game I made with <a href="http://www.yoyogames.com/" target="_blank">GameMaker: Studio</a>, a popular and easy-to-use development suite for making video games. <i>Intrusion</i> is a platformer/arcade-shooter game intended for a middle school audience. Aliens start attacking a military base on the Moon, and it's the player's job to defend it with a stationary turret that fires missiles. The aliens fall out of dropships and float to the ground in an attempt to take the player out. Every kill earns you points, and the object of the game is to get the highest score possible.</p>
-                        
-                        <p>I spent approximately 50 hours on this game. There was a lot of planning and problem solving that I had to work through, but it was well worth it in the end. I wanted the game to be like <a href="http://en.wikipedia.org/wiki/Sabotage_(video_game)" target="_blank">Sabotage</a> on the Apple II, and I think I recreated it very well. It has a modern, flat design and the animations are very clean. The game features menus, a tutorial, and a cut-scene: all of which include some clean animations. The gameplay itself is very smooth with minimal bugs and it progressively gets harder as the game goes on.</p>
-                        
-                        <p><i>Lunar Intrusion</i> is compatible with Windows only.</p>
-                        
-                    </div>
-                    
                 </div>
-                
             </div>
-            
-            
+
+
             <!-- Card -->
             <div class="proj-card" id="4" onclick="openProjInfo(this.id)">
-            
                 <div class="proj-banner">
-                    <img src="/img/flappy.png">
+                    <img src="/img/flappy.png" alt="Flappy Hawk">
                 </div>
-                
                 <div class="proj-card-content">
-                
                     <div class="proj-name">Flappy Hawk</div>
                     <div class="proj-platform">iOS + Android</div>
-                    <div class="proj-info">
-                    
-                        <p>Amidst Flappy Bird's insane success, a lot of remakes of the game were being made. I decided to make my own as well, but in a different way most developers were going. Flappy Hawk isn't a complete remake of Flappy Bird, it's just a custom theme for Flappy Bird that has some school spirit to it.</p>
-                        
-                        <p>This was more of a Phototshop project than anything, and a little bit of extra work  was done for the Android version. On iOS, the theme is available only to jailbroken devices through the BigBoss repo on Cydia. The theme can be enabled with WinterBoard.</p>
-                        
-                        <p>For Android, I recompiled the original app with my own images and created my own installable version of Flappy Bird. You can download the .apk file <a href="/dl/FlappyHawk.apk">here</a>. Please note that you will need to enable Unknown Sources in your settings before the app will be able to install.</p>
-                        
-                    </div>
-                    
                 </div>
-                
             </div>
-            
 
-			<!-- Card -->
+
+            <!-- Card -->
             <div class="proj-card" id="3" onclick="openProjInfo(this.id)">
-            
                 <div class="proj-banner">
                     <img src="/img/red.png" alt="Red Riding Hood">
                 </div>
-                
                 <div class="proj-card-content">
-                
                     <div class="proj-name">Red Riding Hood</div>
                     <div class="proj-platform">Adobe Flash</div>
-                    <div class="proj-info">
-                    
-                        <p>This is an animation I made in Adobe Flash. It shows a small part of the story of Little Red Riding Hood. Red goes to her grandma's house and notices that grandma looks different. The wolf (dressed as her grandma) jumps out of bed and chases Red, then escapes the wolf and hides.</p>
-                        
-                        <p>This project was my first experience with Adobe Flash. I spent a few hours on it, most of which were spent learning how to use the program. I wanted it to be a nice, clean animation that tells the story of Red and the wolf. I used Adobe Illustrator and Photoshop to create images that weren't pixelated and fit better with the house layout I created in Flash. I put some mysterious and puzzling music in the background, and it fit quite well. </p>
-                        
-                        <p>You can see the animation <a href="/img/red.swf" target="_blank">here</a>.</p>
-                        
-                    </div>
-                    
                 </div>
-                
             </div>
 
-			<!-- Card -->
+            <!-- Card -->
             <div class="proj-card" id="2" onclick="openProjInfo(this.id)">
-            
                 <div class="proj-banner">
                     <img src="/img/ssystem.png" alt="The Solar System Alternate">
                 </div>
-                
                 <div class="proj-card-content">
-                
                     <div class="proj-name">The Solar System (Alt)</div>
                     <div class="proj-platform">Web</div>
-                    <div class="proj-info">
-                    
-                        <p>This is an alternate version of <i>The Solar System</i>. For this, I combined the <a href="https://jonobr1.github.io/two.js/" target="_blank">two.js</a> animation and the information from the original site. Hovering the mouse over a planet makes the planet's description show up in a box in the corner. The planets all move around the Sun at different speeds. It has the same audience and goals as the original website.</p>
-                        
-                        <p>This was simply a side project I worked on for a little while. It's coded mostly in JavaScript and uses 2D objects. Every time the page is loaded, the stars are in different formations. I'm very happy with how this turned out for a beginner project with 2D objects.</p>
-                        
-                        <p><i>The Solar System (Alt)</i> validates under the W3C&reg; HTML5 Conformance Checker. You can view the page <a href="http://solarsystem.x10.bz/alt" target="_blank">here</a>.</p>
-                        
-                    </div>
-                    
                 </div>
-                
             </div>
-            
 
-			<!-- Card -->
+
+            <!-- Card -->
             <div class="proj-card" id="1" onclick="openProjInfo(this.id)">
-            
                 <div class="proj-banner">
                     <img src="/img/solar.png" alt="The Solar System">
                 </div>
-                
                 <div class="proj-card-content">
-                
                     <div class="proj-name">The Solar System</div>
                     <div class="proj-platform">Web</div>
-                    <div class="proj-info">
-                    
-                        <p><i>The Solar System</i> is a website designed to teach 3<sup>rd</sup> graders about our solar system. It has a short description of the Sun and the 8 different planets, talking about things like the number of moons, number of rings, number of days in a year, and other fun facts.</p>
-                        
-                        <p>This was my first real project with web development, and I'm very proud of the finished product. It's a static website with well done CSS positioning. The site makes good use of JavaScript with features like drop-down menus, fade animations, and a 2D animation made with <a href="https://jonobr1.github.io/two.js/" target="_blank">two.js</a>. It transitions between pages seamlessly with the fade animations, making it seem like you're never opening a new page. It's very similar to a PowerPoint presentation.</p>
-                        
-                        <p><i>The Solar System</i> validates under the W3C&reg; HTML5 Conformance Checker. You can view the website <a href="http://solarsystem.x10.bz" target="_blank">here</a>.</p>
-                        
-                    </div>
-                    
                 </div>
-                
             </div>
-
+            
+            
         </div>
-        
+
         <br>
         <br>
-        
+
     </div>
-    
+
     <footer>
-        
+
         <div id="ft-contact" class="ft-el">
-        
+
             <p class="ft-heading">CONTACT:</p>
             <p>&nbsp;<a href="mailto:fowlerd11@gmail.com?subject:Contact%20Devin%20Fowler">E-Mail</a>
             </p>
@@ -231,15 +165,15 @@
             </p>
             <p>&nbsp;<a href="https://www.linkedin.com/pub/devin-fowler/b8/292/49" target="_blank">LinkedIn</a>
             </p>
-            
+
         </div>
-        
+
         <div id="ft-line" class="ft-el"></div>
-        
+
         <div id="ft-sitemap" class="ft-el">
-        
-        	<div id="ft-sitemap-left">
-            
+
+            <div id="ft-sitemap-left">
+
                 <p class="ft-heading">SITEMAP:</p>
                 <p>&nbsp;<a href="/">Home</a>
                 </p>
@@ -247,27 +181,26 @@
                 </p>
                 <p>&nbsp;<a href="/projects">Projects</a>
                 </p>
-                
+
             </div>
-            
+
             <div id="ft-sitemap-right">
-            
+
                 <p><a href="/resume">Resume</a>
                 </p>
                 <!--<p><a href="/contact">Instant Message</a>
                 </p>-->
-                
+
             </div>
-            
+
         </div>
-        
+
         <p id="copyright">© 2015-2016 Devin Fowler | All Rights Reserved</p>
-        
+
     </footer>
-        
- 	<script src="/js/animation.js" type="text/javascript"></script>
-	<script src="/js/proj-animations.js" type="text/javascript"></script> 
-      
+    <script src="/js/projects.json" type="text/javascript"></script>
+    <script src="/js/animation.js" type="text/javascript"></script>
+    <script src="/js/proj-animations.js" type="text/javascript"></script>
 </body>
 
 </html>

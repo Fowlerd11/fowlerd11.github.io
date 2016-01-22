@@ -1,29 +1,40 @@
-function openProjInfo(id) {
-    var proj = document.getElementById(id);
-    proj.setAttribute('onclick', 'closeProjInfo(' + id + ')');
-    proj.style.zIndex = '2';
-    proj.style.position = 'absolute';
-    proj.style.top = window.pageYOffset + 100 + 'px';
-    proj.style.left = '12%';
-    proj.style.width = '73%';
-    proj.style.height = 'auto';
-    proj.children[0].style.height = proj.children[0].clientHeight * .75 + 'px';
-    proj.children[0].children[0].style.width = '108%';
-    proj.children[0].children[0].style.top = '-100%';
-    proj.children[0].children[0].style.left = '-5%';
+function openProjInfo(projId) {
+    /* 
+     Copy the info from `proj`, or rewrite the HTML.
+     I would create a <data style="display: none;"></data> in <head>, 
+     then use JSON to define info about the projects, and parse it here.
+    */
+    // var proj = document.getElementById(projId);
+    var overlay = document.getElementById('project-viewer-overlay');
+    overlay.style.visibility = 'visible';
+    overlay.style.opacity = 1;
+    
+    document.documentElement.style.overflow = 'hidden';  // firefox, chrome
+    document.body.scroll = "no"; // ie only
+    
+    var viewer = document.getElementById('project-viewer');
+    viewer.style.visibility = 'visible';
+    viewer.style.opacity = 1;
+    projects.map(function (i) {
+        if (i.id == projId) {
+            viewer.innerHTML = "<h2 class=\"project-viewer-title\">" + i.name + "</h2>"
+            viewer.innerHTML += i.demo
+            viewer.innerHTML += "<em class=\"project-viewer-platform\">" + i.platform + "</em>"
+            viewer.innerHTML += "<hr class=\"project-viewer-top-bar\">"
+            viewer.innerHTML += "<div class=\"project-viewer-pic\"><img src=\"" + i.image + "\"></div>"
+            viewer.innerHTML += "<div class=\"project-viewer-description\">" + i.description + "</div>"
+        }
+    })
 }
 
-function closeProjInfo(id) {
-    var proj = document.getElementById(id);
-    proj.setAttribute('onclick', 'openProjInfo(' + id + ')');
-    proj.style.zIndex = '1';
-    proj.style.position = 'unset';
-    proj.style.top = 'unset';
-    proj.style.left = 'unset';
-    proj.style.width = '320px';
-    proj.style.height = '240px';
-    proj.children[0].style.height = '70%';
-    proj.children[0].children[0].style.width = '130%';
-    proj.children[0].children[0].style.top = '-54%';
-    proj.children[0].children[0].style.left = '-16%';
+function closeProjInfo() {
+    var viewer = document.getElementById('project-viewer');
+    viewer.style.opacity = 0;
+    viewer.style.visibility = 'hidden';
+    var overlay = document.getElementById('project-viewer-overlay');
+    overlay.style.visibility = 'hidden';
+    overlay.style.opacity = 0;
+    
+    document.documentElement.style.overflow = 'auto';  // firefox, chrome
+    document.body.scroll = "yes"; // ie only
 }
