@@ -41,12 +41,11 @@ hr {
     opacity: .6;
 }
 
-.h1 {
+h1 {
     font-size: 1.675em;
     font-weight: 300;
     letter-spacing: .2em;
 }
-
 
 /* Header and Stuff */
 
@@ -427,33 +426,24 @@ footer {
     z-index: 2;
     visibility: hidden;
     opacity: 0;
-    transition: opacity .6s ease-in;
+    transition: opacity .4s ease-in;
 }
 
 #project-viewer {
-<<<<<<< HEAD
     position: fixed;
     width: 68%;
     height: 76%;
     margin: 0 auto;
     top: 12%;
     left: 16%;
-=======
-    position: absolute;
-    width: 70%;
     margin: 0 auto;
-    top: 15%;
-    left: 15%;
->>>>>>> origin/master
-    background-color: #000;
     z-index: 3;
     border-radius: 3px;
     background-color: #FAFAFA;
     box-shadow: 0px 4px 10px #9E9E9E;
     visibility: hidden;
     opacity: 0;
-    transition: opacity .5s ease-in;
-<<<<<<< HEAD
+    transition: opacity .6s ease-in;
     display: flex;
     flex-wrap: wrap;
 }
@@ -463,6 +453,8 @@ footer {
     text-align: left;
     flex-basis: 73%;
     margin-bottom: .4%;
+    font-size: 1.6em;
+    letter-spacing: .03em;
 }
 
 #project-viewer-demo {
@@ -474,15 +466,10 @@ footer {
     position: absolute;
     font-size: 1.5em;
     line-height: 2.2em;
-    margin: 1.5% 1%;
+    margin: 1.8% 1%;
     border-radius: 2px;
     opacity: .95;
     box-shadow: 0px 4px 6px #9E9E9E;
-    transition: all .4s;
-    -webkit-transition: all .4s;
-    -moz-transition: all .4s;
-    -o-transition: all .4s;
-    -ms-transition: all .4s;
     cursor: pointer;
 }
 
@@ -497,6 +484,14 @@ footer {
     -ms-transform: scale(1.02);
 }
 
+.transition {
+    transition: all .4s;
+    -webkit-transition: all .4s;
+    -moz-transition: all .4s;
+    -o-transition: all .4s;
+    -ms-transition: all .4s;
+}
+
 .no-transition {
     transition: none 0s !important;
     -webkit-transition: none 0s !important;
@@ -506,9 +501,10 @@ footer {
 }
 
 .project-viewer-platform {
-    padding-left: 5%;
+    padding-left: 4%;
     text-align: left;
     flex-basis: 50%;
+    color: #777;
 }
 
 .project-viewer-top-bar {
@@ -519,47 +515,26 @@ footer {
     flex-basis: 50%;
     flex-grow: 1;
     flex-shrink: 0;
-    margin: 12%;
+    margin: 4%;
     margin-left: 2%;
     margin-right: 2%;
 }
 
 .project-viewer-pic img {
-=======
-}
-
-.project-viewer-banner {
-    width: 100%;
-    height: 400px;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-    overflow: hidden;
-}
-
-.project-viewer-banner img {
->>>>>>> origin/master
     width: 100%;
     height: auto;
     border-radius: 3px;
-    margin-top: -100px;
 }
 
 .project-viewer-description {
-<<<<<<< HEAD
     flex-basis: 30%;
     flex-grow: 1;
     flex-shrink: 0;
     height: inherit;
-    padding: 1% 1% 2% 0;
+    padding: 2% 2% 2% 0;
     text-align: left;
-    /*box-shadow: inset 0 7px 9px -7px rgba(0,0,0,0.7),
-                inset 0 -7px 9px -7px rgba(0,0,0,0.7);*/
     overflow-y: auto;
-=======
-    padding: 8%;
-    padding-top: 2%;
     text-align: left;
->>>>>>> origin/master
 }
 
 #proj-note {
@@ -613,6 +588,7 @@ footer {
 
 .proj-platform {
     font-style: Italic;
+    color: #666;
 }
 
 .proj-info {
