@@ -471,6 +471,11 @@ footer {
     opacity: .95;
     box-shadow: 0px 4px 6px #9E9E9E;
     cursor: pointer;
+    transition: all .4s;
+    -webkit-transition: all .4s;
+    -moz-transition: all .4s;
+    -o-transition: all .4s;
+    -ms-transition: all .4s;
 }
 
 #project-viewer-demo:hover {
@@ -482,14 +487,6 @@ footer {
     -moz-transform: scale(1.02);
     -o-transform: scale(1.02);
     -ms-transform: scale(1.02);
-}
-
-.transition {
-    transition: all .4s;
-    -webkit-transition: all .4s;
-    -moz-transition: all .4s;
-    -o-transition: all .4s;
-    -ms-transition: all .4s;
 }
 
 .no-transition {
