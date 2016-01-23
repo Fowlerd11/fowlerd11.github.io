@@ -8,10 +8,10 @@ function openProjInfo(projId) {
     var overlay = document.getElementById('project-viewer-overlay');
     overlay.style.visibility = 'visible';
     overlay.style.opacity = 1;
-    
-    document.documentElement.style.overflow = 'hidden';  // firefox, chrome
+
+    document.documentElement.style.overflow = 'hidden'; // firefox, chrome
     document.body.scroll = "no"; // ie only
-    
+
     var viewer = document.getElementById('project-viewer');
     viewer.style.visibility = 'visible';
     viewer.style.opacity = 1;
@@ -34,7 +34,9 @@ function closeProjInfo() {
     var overlay = document.getElementById('project-viewer-overlay');
     overlay.style.visibility = 'hidden';
     overlay.style.opacity = 0;
-    
-    document.documentElement.style.overflow = 'auto';  // firefox, chrome
+
+    viewer.children.namedItem('project-viewer-demo').style.opacity = 0;
+
+    document.documentElement.style.overflow = 'auto'; // firefox, chrome
     document.body.scroll = "yes"; // ie only
 }

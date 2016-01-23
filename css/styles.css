@@ -47,6 +47,7 @@ h1 {
     letter-spacing: .2em;
 }
 
+
 /* Header and Stuff */
 
 header {
@@ -471,11 +472,11 @@ footer {
     opacity: .95;
     box-shadow: 0px 4px 6px #9E9E9E;
     cursor: pointer;
-    transition: all .4s;
-    -webkit-transition: all .4s;
-    -moz-transition: all .4s;
-    -o-transition: all .4s;
-    -ms-transition: all .4s;
+    transition: transform .4s;
+    -webkit-transition: transform .4s;
+    -moz-transition: transform .4s;
+    -o-transition: transform .4s;
+    -ms-transition: transform .4s;
 }
 
 #project-viewer-demo:hover {
