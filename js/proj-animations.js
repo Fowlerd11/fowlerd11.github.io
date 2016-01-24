@@ -36,7 +36,7 @@ function closeProjInfo() {
     viewer.children.namedItem('project-viewer-demo').style.opacity = 0;
     viewer.querySelector('.project-viewer-description').style.opacity = 0
 
-    document.documentElement.style.overflow = 'auto'; // firefox, chrome
+    document.documentElement.style.overflowY = 'auto'; // firefox, chrome
     document.body.scroll = "yes"; // ie only
 
     overlay.style.visibility = 'hidden';
