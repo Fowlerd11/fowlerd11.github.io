@@ -20,7 +20,7 @@ function openProjInfo(projId) {
             viewer.innerHTML = "<h2 class=\"project-viewer-title\">" + i.name + "</h2>"
             viewer.innerHTML += i.demo
             viewer.innerHTML += "<em class=\"project-viewer-platform\">" + i.platform + "</em>"
-            viewer.innerHTML += "<hr class=\"project-viewer-top-bar\">"
+            viewer.innerHTML += "<div class=\"project-viewer-top-bar\"></div>"
             viewer.innerHTML += "<div class=\"project-viewer-pic\"><img src=\"" + i.image + "\"></div>"
             viewer.innerHTML += "<div class=\"project-viewer-description\">" + i.description + "</div>"
         }
@@ -30,13 +30,16 @@ function openProjInfo(projId) {
 function closeProjInfo() {
     var viewer = document.getElementById('project-viewer');
     viewer.style.opacity = 0;
-    viewer.style.visibility = 'hidden';
     var overlay = document.getElementById('project-viewer-overlay');
-    overlay.style.visibility = 'hidden';
     overlay.style.opacity = 0;
 
     viewer.children.namedItem('project-viewer-demo').style.opacity = 0;
+    viewer.querySelector('.project-viewer-description').style.opacity = 0
 
     document.documentElement.style.overflow = 'auto'; // firefox, chrome
     document.body.scroll = "yes"; // ie only
+
+    overlay.style.visibility = 'hidden';
+    viewer.style.visibility = 'hidden';
+
 }

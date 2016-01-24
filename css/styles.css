@@ -71,7 +71,7 @@ header {
     position: absolute;
     width: 100%;
     color: #FAFAFA;
-    margin-top: 3.5%;
+    margin: 3.5%;
     opacity: .98;
     display: block;
     outline: none;
@@ -84,12 +84,14 @@ header {
     width: 100%;
     font-size: 2.2em;
     position: absolute;
-    margin-top: 16%;
+    top: 36%;
     letter-spacing: .375em;
     text-align: center;
     z-index: 2;
     opacity: .8;
     font-style: italic;
+    /*    This keeps bugging the shit out of me */
+    display: none;
 }
 
 #canvas {
@@ -97,7 +99,8 @@ header {
     height: 55%;
     background-color: #C0C0C0;
     opacity: .88;
-    z-index: 1;
+    z-index: 0;
+    position: relative;
 }
 
 nav {
@@ -355,65 +358,6 @@ footer {
     font-size: 1em;
 }
 
-@media screen and (max-width: 775px) and (orientation: portrait) {
-    #title {
-        font-size: 1.8em;
-        letter-spacing: .25em;
-        margin-top: 7.5%;
-    }
-    #phrase {
-        font-size: 1.3em;
-        letter-spacing: .1em;
-        margin-top: 25%;
-    }
-    nav {
-        margin-top: -26px;
-    }
-    .nav-item {
-        font-size: .7em;
-        padding-left: 2%;
-        padding-right: 2%;
-    }
-    .preview {
-        margin: 0;
-        margin-top: 1.5%;
-        margin-bottom: 1.5%;
-    }
-}
-
-@media screen and (max-width: 775px) and (orientation: landscape) {
-    #title {
-        font-size: 2.9em;
-        letter-spacing: .3em;
-        margin-top: 2%;
-    }
-    #phrase {
-        font-size: 1.5em;
-        margin-top: 16%;
-    }
-    nav {
-        margin-top: -27px;
-    }
-    .nav-item {
-        font-size: .9em;
-    }
-}
-
-
-/* About page */
-
-.about {
-    width: 80%;
-    margin: 5% auto;
-    z-index: 4;
-    text-align: center;
-}
-
-.about p {
-    text-align: left;
-    z-index: 4;
-}
-
 
 /* Projects page */
 
@@ -432,11 +376,11 @@ footer {
 
 #project-viewer {
     position: fixed;
-    width: 68%;
-    height: 76%;
+    width: 70%;
+    height: 78%;
     margin: 0 auto;
-    top: 12%;
-    left: 16%;
+    top: 10%;
+    left: 14%;
     margin: 0 auto;
     z-index: 3;
     border-radius: 3px;
@@ -447,6 +391,8 @@ footer {
     transition: opacity .6s ease-in;
     display: flex;
     flex-wrap: wrap;
+    overflow: hidden;
+    padding: 1%;
 }
 
 .project-viewer-title {
@@ -507,6 +453,10 @@ footer {
 
 .project-viewer-top-bar {
     flex-basis: 100%;
+    height: 2px;
+    background: #BDBDBD;
+    opacity: .65;
+    margin: 2%;
 }
 
 .project-viewer-pic {
@@ -528,11 +478,12 @@ footer {
     flex-basis: 30%;
     flex-grow: 1;
     flex-shrink: 0;
-    height: inherit;
+    height: 70%;
     padding: 2% 2% 2% 0;
     text-align: left;
-    overflow-y: auto;
+    overflow-y: scroll;
     text-align: left;
+    transition: none;
 }
 
 #proj-note {
@@ -682,4 +633,67 @@ input#submit:active {
 .g-recaptcha {
     margin-top: 1.5%;
     margin-left: 1%;
+}
+
+@media screen and (max-width: 775px) and (orientation: portrait) {
+    #title {
+        font-size: 1.8em;
+        letter-spacing: .25em;
+        margin-top: 7.5%;
+    }
+    #phrase {
+        font-size: 1.3em;
+        letter-spacing: .1em;
+        margin-top: 25%;
+    }
+    nav {
+        margin-top: -26px;
+    }
+    .nav-item {
+        font-size: .7em;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+    .preview {
+        margin: 0;
+        margin-top: 1.5%;
+        margin-bottom: 1.5%;
+    }
+    #project-viewer {
+        left: 3%;
+        width: 92%;
+    }
+}
+
+@media screen and (max-width: 775px) and (orientation: landscape) {
+    #title {
+        font-size: 2.9em;
+        letter-spacing: .3em;
+        margin-top: 2%;
+    }
+    #phrase {
+        font-size: 1.5em;
+        margin-top: 16%;
+    }
+    nav {
+        margin-top: -27px;
+    }
+    .nav-item {
+        font-size: .9em;
+    }
+}
+
+
+/* About page */
+
+.about {
+    width: 80%;
+    margin: 5% auto;
+    z-index: 4;
+    text-align: center;
+}
+
+.about p {
+    text-align: left;
+    z-index: 4;
 }
