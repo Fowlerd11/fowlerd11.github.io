@@ -361,6 +361,10 @@ footer {
 
 /* Projects page */
 
+#proj-content {
+    text-align: center;
+}
+
 #project-viewer-overlay {
     position: fixed;
     top: 0;
