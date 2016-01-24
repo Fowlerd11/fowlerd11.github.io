@@ -361,6 +361,10 @@ footer {
 
 /* Projects page */
 
+#proj-content {
+    text-align: center;
+}
+
 #project-viewer-overlay {
     position: fixed;
     top: 0;
@@ -471,7 +475,7 @@ footer {
 .project-viewer-pic img {
     width: 100%;
     height: auto;
-    border-radius: 3px;
+    border-radius: 3px;a
 }
 
 .project-viewer-description {
@@ -485,6 +489,28 @@ footer {
     text-align: left;
     transition: none;
 }
+
+/* custom scrollbar css */
+
+	#scrollbar-custom::-webkit-scrollbar{
+		width: 13px;
+		background-color: #fafafa;
+    }
+
+	#scrollbar-custom::-webkit-scrollbar-track{
+		border-radius: 16px;
+        background-color: #dfdfdf;
+    }
+
+	#scrollbar-custom::-webkit-scrollbar-thumb{
+		background-color: #aaa;
+		border-radius: 16px;
+	}
+
+	#scrollbar-custom::-webkit-scrollbar-thumb:active{
+		background-color:#888;
+	}
+
 
 #proj-note {
     text-align: center;
